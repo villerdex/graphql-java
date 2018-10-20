@@ -12,7 +12,7 @@ There are tons of article out there but I recommend reading this: https://blog.a
 ### Usage
 
 #### Query for owner details with sub Object "pet"
-   {
+   `{
       owner{
        name,
        address,
@@ -21,7 +21,7 @@ There are tons of article out there but I recommend reading this: https://blog.a
          name
        }
      }
-   }   
+   } `  
 
 #### Query Owner details using fragment
   {
