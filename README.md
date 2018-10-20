@@ -24,7 +24,7 @@ There are tons of article out there but I recommend reading this: https://blog.a
    } `  
 
 #### Query Owner details using fragment
-  {
+  `{
      owner{
       ...ownerDetails
     }
@@ -33,10 +33,10 @@ There are tons of article out there but I recommend reading this: https://blog.a
       id
       name
       address
-  }
+  }`
   
 #### Create Pet using mutation request
-mutation createPet {
+`mutation createPet {
   createPet(name: "Pot pot", age: 1, type: CAT,
    owner: {
       name:"John Doe"
@@ -48,6 +48,6 @@ mutation createPet {
       name
     }
   }
-}
+}`
 
 
