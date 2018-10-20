@@ -12,16 +12,16 @@ There are tons of article out there but I recommend reading this: https://blog.a
 ### Usage
 
 #### Query for owner details with sub Object "pet"
-{
-   owner{
-    name,
-    address,
-    id,
-    pets {
-      name
-    }
-  }
-}   
+   {
+      owner{
+       name,
+       address,
+       id,
+       pets {
+         name
+       }
+     }
+   }   
 
 #### Query Owner details using fragment
   {
