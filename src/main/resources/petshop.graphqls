@@ -1,0 +1,48 @@
+type Query {
+    pets: [Pet]
+    owner(id: Int): Owner
+}
+
+type Mutation {
+    createPet(name: String, age: Int, type: Animal, owner: OwnerInput) :Pet
+}
+
+type Pet {
+    id: Int
+    type: Animal
+    name: String
+    age: Int
+    owner: Owner
+}
+
+
+input PetInput {
+    id: Int
+    type: Animal
+    name: String
+    age: Int
+    owner: OwnerInput
+}
+
+
+type Owner {
+       id: Int
+       name: String
+       address: String
+       pets: [Pet]
+}
+
+input OwnerInput {
+    id: Int
+    name: String
+    address: String
+    pets: [PetInput]
+}
+
+
+enum Animal {
+    DOG
+    CAT
+    BADGER
+    MAMMOTH
+}
