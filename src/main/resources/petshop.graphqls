@@ -7,6 +7,10 @@ type Mutation {
     createPet(name: String, age: Int, type: Animal, owner: OwnerInput) :Pet
 }
 
+type Subscription {
+    getNews: NewsUpdate
+}
+
 type Pet {
     id: Int
     type: Animal
@@ -37,6 +41,12 @@ input OwnerInput {
     name: String
     address: String
     pets: [PetInput]
+}
+
+type NewsUpdate {
+
+    newsContent: String
+    newsNumber: Int
 }
 
 

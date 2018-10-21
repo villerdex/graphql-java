@@ -50,4 +50,20 @@ There are tons of article out there but I recommend reading this: https://blog.a
   }
 }`
 
+#### Create pet using variable, make sure to define variable in GraphiQl for playground
+    `mutation createPet($petName: String) {
+       createPet(name:$petName, age: 1, type: CAT,
+        owner: {
+           name:"John Doe"
+         }) {
+         id,
+         name,
+         type,
+         owner {
+           name
+         }
+       }
+     }
+
+`
 

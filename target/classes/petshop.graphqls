@@ -7,6 +7,10 @@ type Mutation {
     createPet(name: String, age: Int, type: Animal, owner: OwnerInput) :Pet
 }
 
+type Subscription {
+    getNews: NewsUpdate
+}
+
 type Pet {
     id: Int
     type: Animal
@@ -39,11 +43,12 @@ input OwnerInput {
     pets: [PetInput]
 }
 
-fragment frag on Owner {
-    id
-    name
-    address
+type NewsUpdate {
+
+    newsContent: String
+    newsNumber: Int
 }
+
 
 enum Animal {
     DOG
