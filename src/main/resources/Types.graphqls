@@ -1,0 +1,30 @@
+
+scalar Date
+
+type Pet {
+    id: Int
+    type: Animal
+    name: String
+    age: Int
+    owner: Owner
+    availableDate: Date
+}
+
+type Owner {
+       id: Int
+       name: String
+       address: String
+       pets: [Pet]
+}
+
+type NewsUpdate {
+    newsContent: String
+    newsNumber: Int
+}
+
+enum Animal {
+    DOG
+    CAT
+    BADGER
+    MAMMOTH
+}

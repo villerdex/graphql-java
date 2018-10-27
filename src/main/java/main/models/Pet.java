@@ -18,4 +18,6 @@ public class Pet {
     private int age;
 
     private Owner owner;
+
+    private ScalarDate availableDate;
 }

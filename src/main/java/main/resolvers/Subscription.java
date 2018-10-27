@@ -12,7 +12,7 @@ public class Subscription implements GraphQLSubscriptionResolver {
 
     private NewsPublisher newsPublisher;
 
-    Subscription(NewsPublisher newsPublisher) {
+    public Subscription(NewsPublisher newsPublisher) {
         this.newsPublisher = newsPublisher;
     }
 
