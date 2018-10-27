@@ -12,46 +12,46 @@ There are tons of article out there but I recommend reading this: https://blog.a
 ### Usage
 
 #### Query for owner details with sub Object "pet"
-   `{
-      owner{
-       name,
-       address,
-       id,
-       pets {
-         name
-       }
-     }
-   } `  
+         {
+            owner{
+             name,
+             address,
+             id,
+             pets {
+               name
+             }
+           }
+         }
 
 #### Query Owner details using fragment
-  `{
-     owner{
-      ...ownerDetails
-    }
-  }
-  fragment ownerDetails on Owner {
-      id
-      name
-      address
-  }`
+        {
+           owner{
+            ...ownerDetails
+          }
+        }
+        fragment ownerDetails on Owner {
+            id
+            name
+            address
+        }
   
 #### Create Pet using mutation request
-`mutation createPet {
-  createPet(name: "Pot pot", age: 1, type: CAT,
-   owner: {
-      name:"John Doe"
-    }) {
-    id,
-    name,
-    type,
-    owner {
-      name
-    }
-  }
-}`
+      mutation createPet {
+        createPet(name: "Pot pot", age: 1, type: CAT,
+         owner: {
+            name:"John Doe"
+          }) {
+          id,
+          name,
+          type,
+          owner {
+            name
+          }
+        }
+      }
 
 #### Create pet using variable, make sure to define variable in GraphiQl for playground
-    `mutation createPet($petName: String) {
+    mutation createPet($petName: String) {
        createPet(name:$petName, age: 1, type: CAT,
         owner: {
            name:"John Doe"
@@ -65,5 +65,4 @@ There are tons of article out there but I recommend reading this: https://blog.a
        }
      }
 
-`
 
