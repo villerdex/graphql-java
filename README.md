@@ -1,12 +1,12 @@
 # graphql-java
 graphQL implementation using Java spring boot
 
-## GrapQL vs REST?
+## GraphQL vs REST?
 There are tons of article out there but I recommend reading this: https://blog.apollographql.com/graphql-vs-rest-5d425123e34b
 
 ### This repo serves as demo how to implement graphQL for one our fav programming language Java.
 
-1) Clone repo
+1) Clone repo & run
 2) open: http://localhost:8080/graphiql
 
 ### Usage
@@ -50,7 +50,7 @@ There are tons of article out there but I recommend reading this: https://blog.a
         }
       }
 
-#### Create pet using variable, make sure to define variable in GraphiQl for playground
+#### Create pet using variable, make sure to define variable in GraphiQL for playground
     mutation createPet($petName: String) {
        createPet(name:$petName, age: 1, type: CAT,
         owner: {
@@ -64,5 +64,32 @@ There are tons of article out there but I recommend reading this: https://blog.a
          }
        }
      }
+
+#### Modularize your graphqls file by using SchemaParser class
+
+     SchemaParser.newParser()
+             .files("petshop.graphqls", "Types.graphqls", "InputTypes.graphqls")
+             .resolvers(new Query(), new Mutation(), new Subscription(new NewsPublisher()))
+             .scalars(new ScalarDate())
+             .build().makeExecutableSchema();
+             
+#### Creating scalar data type
+    1) define scalar in your schema 
+    
+    scalar Date
+    
+    2) Create class for that type
+        - see the ScalarDate class in this sample
+        
+    3) Create coercing instance or class to implement serialization & deserialization
+        - see the ScalarDateCoercing class in this repo.    
+
+#### Coercing notes: 
+    source: https://github.com/graphql/graphql-js/issues/500
+serialize: gets invoked when serializing the result to send it back to a client.
+
+parseValue: gets invoked to parse client input that was passed through variables.
+
+parseLiteral: gets invoked to parse client input that was passed inline in the query.
 
 

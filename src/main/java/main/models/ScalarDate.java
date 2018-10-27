@@ -1,7 +1,6 @@
 package main.models;
 
 import graphql.schema.*;
-import main.ScalarDateCoercing;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;

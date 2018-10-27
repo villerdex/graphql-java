@@ -1,11 +1,10 @@
-package main;
+package main.models;
 
 import graphql.language.StringValue;
 import graphql.schema.CoercingParseLiteralException;
 import graphql.schema.CoercingParseValueException;
 import graphql.schema.CoercingSerializeException;
 import graphql.schema.GraphQLScalarType;
-import main.models.ScalarDate;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -40,7 +39,7 @@ public class ScalarDateCoercing implements graphql.schema.Coercing {
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        return "Xxxx";
+        return null;
     }
 
     public void setDate(Date date) {
