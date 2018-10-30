@@ -66,12 +66,20 @@ There are tons of article out there but I recommend reading this: https://blog.a
      }
 
 #### Modularize your graphqls file by using SchemaParser class
-
-     SchemaParser.newParser()
-             .files("petshop.graphqls", "Types.graphqls", "InputTypes.graphqls")
-             .resolvers(new Query(), new Mutation(), new Subscription(new NewsPublisher()))
-             .scalars(new ScalarDate())
-             .build().makeExecutableSchema();
+    graphql-java-tool automatically scan "**/*.graphqls" files in your resource folder
+    most of the time you don't need to explicitly define them, incase the current implementation from their doc
+    in your spring boot add we can add :
+    
+    @Bean
+    public GraphQLSchema schema() {
+        return SchemaParser.newParser()
+                .files("petshop.graphqls", "Types.graphqls", "InputTypes.graphqls")
+                .resolvers(new Query(), new Mutation(), new Subscription(new NewsPublisher()))
+                .scalars(new ScalarDate())
+                .dictionary("WeirdPet", WeirdPet.class)
+                .build().makeExecutableSchema();
+    }
+    
              
 #### Creating scalar data type
     1) define scalar in your schema 

@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54aafcc8-4430-45b5-88bd-3b0f6c403e5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/models/Classification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/main/models/WeirdPet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/AppGraphql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/AppGraphql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/models/Owner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/models/Owner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/models/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/models/NormalPet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/resolvers/Mutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/resolvers/Mutation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/resolvers/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/resolvers/Query.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/resolvers/Subscription.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/main/resolvers/Subscription.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Types.graphqls" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Types.graphqls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/petshop.graphqls" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/petshop.graphqls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/petshop.graphqls" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/petshop.graphqls" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -52,7 +39,7 @@
           <entry key="dummy" value="81" />
           <entry key="graphqls" value="1611" />
           <entry key="java" value="3131" />
-          <entry key="md" value="835" />
+          <entry key="md" value="1253" />
           <entry key="xml" value="94" />
           <entry key="yml" value="10" />
         </counts>
@@ -60,7 +47,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="3131" />
-          <entry key="Markdown" value="706" />
+          <entry key="Markdown" value="1124" />
           <entry key="PLAIN_TEXT" value="1821" />
           <entry key="XML" value="94" />
           <entry key="YAML" value="10" />
@@ -117,8 +104,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/AppGraphql.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+            <state relative-caret-position="295">
+              <caret line="25" column="7" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="25" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,12 +122,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="243">
-                <caret line="97" column="12" selection-start-line="97" selection-start-column="12" selection-end-line="97" selection-end-column="12" />
+              <first_editor relative-caret-position="198">
+                <caret line="72" selection-start-line="72" selection-end-line="72" />
               </first_editor>
               <second_editor />
             </state>
@@ -186,10 +173,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/resolvers/Mutation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
+            <state relative-caret-position="343">
               <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
             </state>
           </provider>
@@ -220,8 +207,8 @@
       <find>graphql-spring-boot-starter</find>
       <find>getAdoptablePet</find>
       <find>createPet</find>
-      <find>addForAdoptPet</find>
       <find>getAdoptableWeirdPet</find>
+      <find>addForAdoptPet</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -255,7 +242,6 @@
         <option value="$PROJECT_DIR$/src/main/java/main/resolvers/Subscription.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/Controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/Controller/GraphQLEndpoint.java" />
-        <option value="$PROJECT_DIR$/src/main/java/main/AppGraphql.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/src/main/java/main/models/Pet.java" />
@@ -263,9 +249,10 @@
         <option value="$PROJECT_DIR$/src/main/java/main/models/PEEEEEEEET.java" />
         <option value="$PROJECT_DIR$/src/main/resources/Types.graphqls" />
         <option value="$PROJECT_DIR$/src/main/java/main/resolvers/Query.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/resources/petshop.graphqls" />
         <option value="$PROJECT_DIR$/src/main/java/main/resolvers/Mutation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/main/AppGraphql.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -373,7 +360,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="ver&#9;ACTION&#9;ActivateVersionControlToolWindow" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540930444423" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540930799036" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -464,11 +451,11 @@
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.328877" />
-      <window_info anchor="bottom" id="Terminal" order="6" weight="0.38235295" />
+      <window_info anchor="bottom" id="Terminal" order="6" visible="true" weight="0.38235295" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.5588235" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32379714" />
-      <window_info anchor="bottom" id="Run" order="10" visible="true" weight="0.39973262" />
+      <window_info anchor="bottom" id="Run" order="10" weight="0.39973262" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -482,18 +469,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/main/AppGraphql.java</url>
-          <line>19</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -737,16 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/AppGraphql.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="50" lean-forward="true" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main/models/WeirdPet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -771,21 +736,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="243">
-            <caret line="97" column="12" selection-start-line="97" selection-start-column="12" selection-end-line="97" selection-end-column="12" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
@@ -819,8 +769,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main/resolvers/Mutation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
+        <state relative-caret-position="343">
           <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/AppGraphql.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="25" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="198">
+            <caret line="72" selection-start-line="72" selection-end-line="72" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
         </state>
       </provider>
     </entry>
