@@ -83,6 +83,23 @@ There are tons of article out there but I recommend reading this: https://blog.a
         
     3) Create coercing instance or class to implement serialization & deserialization
         - see the ScalarDateCoercing class in this repo.    
+        
+#### Union type
+    Make sure define atleast 1 query or mutation request for every type in union
+    I created ticket for this one: https://github.com/graphql-java-kickstart/graphql-java-tools/issues/200
+    you can query using:
+    
+    {
+      pets{
+      ... on NormalPet {
+        id
+      }
+      ... on WeirdPet {
+         sssname
+      }
+      }
+    }
+    
 
 #### Coercing notes: 
     source: https://github.com/graphql/graphql-js/issues/500

@@ -16,7 +16,7 @@ public class Subscription implements GraphQLSubscriptionResolver {
         this.newsPublisher = newsPublisher;
     }
 
-    Publisher<NewsUpdate> getNews() {
+    public Publisher<NewsUpdate> getNews() {
         return newsPublisher.getPublisher();
     }
 

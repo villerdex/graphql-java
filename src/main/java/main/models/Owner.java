@@ -7,8 +7,8 @@ import java.util.List;
 @Data
 public class Owner {
 
-    private int Id;
+    private long Id;
     private String name;
     private String address;
-    private List<Pet> pets;
+    private List<NormalPet> pets;
 }

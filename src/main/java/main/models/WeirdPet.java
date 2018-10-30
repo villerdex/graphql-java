@@ -7,17 +7,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Pet {
+public class WeirdPet {
 
     private long id;
-
     private String name;
-
-    private Animal type;
-
     private int age;
-
-    private Owner owner;
-
     private ScalarDate availableDate;
+    private Classification classification;
+
 }

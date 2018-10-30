@@ -1,10 +1,7 @@
 package main.resolvers;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import main.models.Animal;
-import main.models.Owner;
-import main.models.Pet;
-import main.models.ScalarDate;
+import main.models.*;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -15,17 +12,37 @@ import java.util.List;
 @Component
 public class Query implements GraphQLQueryResolver {
 
-    public List<Pet> pets() {
-        List<Pet> pets = new ArrayList();
+    public List<Object> pets() {
+        List<Object> pets = new ArrayList();
 
-        Pet aPet = new Pet();
+        NormalPet aPet = new NormalPet();
+        WeirdPet weirdPet = new WeirdPet();
 
-        aPet.setId(1l);
+        aPet.setId(100000);
         aPet.setName("Bill");
         aPet.setAge(9);
         aPet.setType(Animal.MAMMOTH);
 
+        weirdPet.setId(1);
+        weirdPet.setName("Weirdo");
+        weirdPet.setAge(9);
+        weirdPet.setClassification(Classification.Reptile);
+
         pets.add(aPet);
+        pets.add(weirdPet);
+
+        return pets;
+    }
+
+    public  List<WeirdPet>  getAdoptableWeirdPet() {
+        WeirdPet weirdPet = new WeirdPet();
+        weirdPet.setId(1);
+        weirdPet.setName("Bill");
+        weirdPet.setAge(9);
+        weirdPet.setClassification(Classification.Reptile);
+
+        List<WeirdPet> pets = new ArrayList();
+        pets.add(weirdPet);
 
         return pets;
     }
@@ -35,11 +52,11 @@ public class Query implements GraphQLQueryResolver {
         owner.setAddress("home address");
         owner.setName("John Doe");
 
-        Pet[] pets = new Pet[5];
+        NormalPet[] pets = new NormalPet[5];
 
         // create ramdom pet as sample
         for (int x = 0; x <= 4; x ++) {
-            pets[x] = new Pet(1, "pet"+x, Animal.DOG, 20, owner, null );
+            pets[x] = new NormalPet(1, "pet"+ x, Animal.DOG, 20, owner, null );
 
         }
 
@@ -48,18 +65,18 @@ public class Query implements GraphQLQueryResolver {
         return owner;
     }
 
-    public List<Pet>  getAdoptablePet() {
+    public List<NormalPet>  getAdoptablePet() {
         ScalarDate scalarDate = new ScalarDate(new Date());
 
-        List<Pet> pets = new ArrayList();
-
-        Pet aPet = new Pet();
+        NormalPet aPet = new NormalPet();
 
         aPet.setId(1);
         aPet.setName("Bill");
         aPet.setAge(9);
         aPet.setType(Animal.MAMMOTH);
         aPet.setAvailableDate(scalarDate);
+
+        List<NormalPet> pets = new ArrayList();
         pets.add(aPet);
 
         return pets;

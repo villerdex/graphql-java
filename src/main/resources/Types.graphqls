@@ -1,7 +1,16 @@
 
 scalar Date
+union Pet =  NormalPet | WeirdPet
 
-type Pet {
+type WeirdPet {
+    id: Int
+    name: String
+    age: Int
+    classification: Classification
+    availableDate: Date
+}
+
+type NormalPet {
     id: Int
     type: Animal
     name: String
@@ -14,12 +23,19 @@ type Owner {
        id: Int
        name: String
        address: String
-       pets: [Pet]
+       pets: [NormalPet]
 }
 
 type NewsUpdate {
     newsContent: String
     newsNumber: Int
+}
+
+enum Classification {
+    Reptile
+    Amphibians
+    Insects
+    Vertebrate
 }
 
 enum Animal {
@@ -28,3 +44,4 @@ enum Animal {
     BADGER
     MAMMOTH
 }
+

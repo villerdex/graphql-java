@@ -1,12 +1,14 @@
 type Query {
     pets: [Pet]
     owner(id: Int): Owner
-    getAdoptablePet: [Pet]
+    getAdoptablePet: [NormalPet]
+    getAdoptableWeirdPet: [WeirdPet]
 }
 
 type Mutation {
-    createPet(name: String, age: Int, type: Animal, owner: OwnerInput) : Pet
-    addForAdoptPet(name: String, age: Int, type: Animal, availableDate: Date) : Pet
+    createPet(name: String, age: Int, type: Animal, owner: OwnerInput) : NormalPet
+    addForAdoptPet(name: String, age: Int, type: Animal, availableDate: Date) : NormalPet
+    addForAdoptWeirdPet(name: String, age: Int, classification: Classification, availableDate: Date) : WeirdPet
 }
 
 type Subscription {

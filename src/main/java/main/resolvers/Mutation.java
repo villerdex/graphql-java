@@ -1,18 +1,15 @@
 package main.resolvers;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
-import main.models.Animal;
-import main.models.Owner;
-import main.models.Pet;
-import main.models.ScalarDate;
+import main.models.*;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Mutation implements GraphQLMutationResolver {
 
-    public Pet createPet(String name, int age, Animal animal, Owner owner) {
+    public NormalPet createPet(String name, int age, Animal animal, Owner owner) {
 
-        Pet pet = new Pet();
+        NormalPet pet = new NormalPet();
         pet.setId(1);
         pet.setName(name);
 
@@ -26,13 +23,28 @@ public class Mutation implements GraphQLMutationResolver {
         return pet;
     }
 
-    public Pet addForAdoptPet(String name, int age, Animal animal, ScalarDate availableDate) {
-        Pet pet = new Pet();
+    public NormalPet addForAdoptPet(String name, int age, Animal animal, ScalarDate availableDate) {
+        NormalPet pet = new NormalPet();
 
         pet.setId(1);
         pet.setName(name);
         pet.setAge(age);
         pet.setType(animal);
+        pet.setAvailableDate(availableDate);
+
+        System.out.println("pet for adopt created");
+
+        return pet;
+
+    }
+
+    public WeirdPet addForAdoptWeirdPet(String name, int age, Classification classification, ScalarDate availableDate) {
+        WeirdPet pet = new WeirdPet();
+
+        pet.setId(1);
+        pet.setName(name);
+        pet.setAge(age);
+        pet.setClassification(classification);
         pet.setAvailableDate(availableDate);
 
         System.out.println("pet for adopt created");
